@@ -63,4 +63,5 @@ function stepstyle_register_fashion_tips() {
 }
 
 add_action('init', 'stepstyle_register_fashion_tips');
+
 ?>
