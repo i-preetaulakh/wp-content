@@ -1,0 +1,60 @@
+/*
+Theme Name: Step Style
+Author: Preet Aulakh
+Version: 1.0
+Description: A custom Full Site Editing theme for my e-commerce project.
+*/
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    
+}
+
+header {
+    margin: 0 auto;
+}
+
+body img {
+    width: 200px;
+}
+
+/* Blog Archive Styling */
+.blog-archive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.blog-archive .post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.blog-archive .post:hover {
+    transform: scale(1.05);
+}
+.blog-archive .post img {
+    width: 100%;
+    height: auto;
+}
+
+/* Single Blog Post Styling */
+.single-post {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+.single-post img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.single-post h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
