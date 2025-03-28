@@ -4,7 +4,7 @@ function stepstyle_enqueue_styles() {
 
 }
 add_action('wp_enqueue_scripts', 'stepstyle_enqueue_styles');
-// Register Custom Post Type: Fashion Tips
+// Custom Post Type: Fashion Tips
 function stepstyle_register_fashion_tips() {
 
     $labels = array(
@@ -42,21 +42,20 @@ function stepstyle_register_fashion_tips() {
         'description'           => __('Posts about fashion tips and trends.', 'stepstyle'),
         'labels'                => $labels,
         'supports'              => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields', 'comments'),
-        'taxonomies'            => array('category', 'post_tag'), // Add categories and tags if needed
+        'taxonomies'            => array('category', 'post_tag'), 
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
         'show_in_menu'          => true,
         'menu_position'         => 5,
-        'menu_icon'             => 'dashicons-admin-appearance', // You can choose an icon from https://developer.wordpress.org/resource/dashicons/
-        'show_in_admin_bar'     => true,
+        'menu_icon'             => 'dashicons-admin-appearance', 
         'show_in_nav_menus'     => true,
         'can_export'            => true,
         'has_archive'           => true,
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
         'capability_type'       => 'post',
-        'rewrite'               => array('slug' => 'fashion-tips'), // URL slug for the custom post type
+        'rewrite'               => array('slug' => 'fashion-tips'),
     );
 
     register_post_type('fashion_tips', $args);
