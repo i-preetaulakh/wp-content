@@ -17,13 +17,13 @@ header {
 }
 
 body img {
-    width: 200px;
+    width: 200px; 
 }
 
 /* Blog Archive Styling */
 .blog-archive {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the number of columns as needed */
     gap: 20px;
     padding: 20px;
 }
@@ -31,7 +31,7 @@ body img {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
 }
 .blog-archive .post:hover {
     transform: scale(1.05);
@@ -49,11 +49,32 @@ body img {
     line-height: 1.6;
 }
 .single-post img {
-    width: 100%;
+    width: 100%;    /* Make images responsive */
     border-radius: 8px;
     margin-bottom: 20px;
 }
 .single-post h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2rem; 
+    margin-bottom: 10px;  
 }
+
+/* Basic button styling */
+.button {
+    display: inline-block; /* Ensures the button behaves like an inline element */
+    padding: 10px 20px; /* Adds spacing inside the button */
+    font-size: 16px; 
+    color: #fff;
+    background-color: #3498db; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; /* Changes cursor to a pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    background-color: #2980b9; 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
