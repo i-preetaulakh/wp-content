@@ -1,9 +1,10 @@
 <?php
+// Enqueue Styles
 function stepstyle_enqueue_styles() {
     wp_enqueue_style('stepstyle-main', get_stylesheet_uri());
-
 }
 add_action('wp_enqueue_scripts', 'stepstyle_enqueue_styles');
+
 // Custom Post Type: Fashion Tips
 function stepstyle_register_fashion_tips() {
 
@@ -56,6 +57,7 @@ function stepstyle_register_fashion_tips() {
         'publicly_queryable'    => true,
         'capability_type'       => 'post',
         'rewrite'               => array('slug' => 'fashion-tips'),
+        'show_in_rest'          => true, // Ensure compatibility with Gutenberg and REST API
     );
 
     register_post_type('fashion_tips', $args);
@@ -63,4 +65,13 @@ function stepstyle_register_fashion_tips() {
 
 add_action('init', 'stepstyle_register_fashion_tips');
 
+// Include Custom Post Type in Homepage Query
+function include_custom_post_type_in_homepage( $query ) {
+    // Check if we're on the homepage and the main query is being executed
+    if ( $query->is_home() && $query->is_main_query() ) {
+        // Add your custom post type to the query
+        $query->set( 'post_type', array( 'post', 'fashion_tips' ) );
+    }
+}
+add_action( 'pre_get_posts', 'include_custom_post_type_in_homepage' );
 ?>

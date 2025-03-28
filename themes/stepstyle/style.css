@@ -9,8 +9,7 @@ Description: A custom Full Site Editing theme for my e-commerce project.
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
-    box-sizing: border-box;
-    
+    box-sizing: border-box; 
 }
 
 header {
